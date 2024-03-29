@@ -1,44 +1,15 @@
-/* Application-wide Styles */
 h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-  }
-  h2, h3 {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-  }
-  body {
-    margin: 2em;
-  }
-  body, input[type="text"], button {
-    color: #333;
-    font-family: Cambria, Georgia, serif;
-  }
-  button {
-    background-color: #eee;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: black;
-    font-size: 1.2rem;
-    padding: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-  button:hover {
-    background-color: black;
-    color: white;
-  }
-  button:disabled {
-    background-color: #eee;
-    color: #aaa;
-    cursor: auto;
-  }
-  
-  /* everywhere else */
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  color: #333;
+  background-color: #f9f9f9; /* Adding a light gray background color */
+  border-bottom: 2px solid #007bff; /* Adding a blue colored bottom border */
+  padding: 10px 0; /* Adding padding to create space around the text */
+  margin-bottom: 20px; /* Adding some space below the heading */
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

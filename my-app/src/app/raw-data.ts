@@ -1,4 +1,4 @@
-export interface Hero {
+export interface RawData {
   id: number;
   name: string;
   status: string;
@@ -14,6 +14,9 @@ export interface Hero {
       url: string
   };
   image: string;
+  episode?: string [];
+  url?: string;
+  created?: string
   }
 
   

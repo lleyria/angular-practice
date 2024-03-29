@@ -1,15 +1,42 @@
-<div *ngIf="hero">
-    <h2>{{hero.name | uppercase}} Details</h2>
+<div *ngIf="hero" class="container">
+    <h2>{{hero.name | uppercase}}</h2>
+    <img src={{hero.image}} alt={{hero.name}}>
     <table border="1" cellspacing="0" cellpadding="5">
       <tr>
         <td>Id</td>
         <td>Name</td>
-        <td>Row 1, Column 3</td>
+        <td>Status</td>
+        <td>Species</td>
+        <td>Gender</td>
+        <td>Origin</td>
       </tr>
       <tr>
         <td>{{hero.id}}</td>
-        <td><input id="hero-name" [(ngModel)]="hero.name" placeholder="name"></td>
-        <td>Row 2, Column 3</td>
+        <td>{{hero.name}}</td>
+        <td>{{hero.status}}</td>
+        <td>{{hero.species}}</td>
+        <td>{{hero.gender}}</td>
+        <td>{{hero.origin.name}}</td>
+      </tr>
+    </table>
+    <br>
+    <span>Spanish Transaltion</span>
+    <table border="1" cellspacing="0" cellpadding="5">
+      <tr>
+        <td>Id</td>
+        <td>{{ 'Name' | spanishTranslation }}</td>
+        <td>{{ 'Status' | spanishTranslation }}</td>
+        <td>{{ 'Species' | spanishTranslation }}</td>
+        <td>{{ 'Gender' | spanishTranslation }}</td>
+        <td>{{ 'Origin' | spanishTranslation }}</td>
+      </tr>
+      <tr>
+        <td>{{hero.id }}</td>
+        <td>{{hero.name}}</td>
+        <td>{{hero.status | spanishTranslation}}</td>
+        <td>{{hero.species | spanishTranslation}}</td>
+        <td>{{hero.gender | spanishTranslation}}</td>
+        <td>{{hero.origin.name | spanishTranslation}}</td>
       </tr>
     </table>
   </div>

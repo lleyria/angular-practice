@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 import { Hero } from './hero';
-import { HEROES } from './mock-heroes';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -11,14 +10,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HeroService {
 
-  private apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0';
+  private apiUrl = 'https://rickandmortyapi.com/api/character/1,2,3,4,5,10,11,12,13,22,25,125,49';
 
-  //constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getHeroes(): Observable<any[]> {
-    // const hola =  this.http.get<any>(this.apiUrl);
-    // console.log('hola', hola);
-    const heroes = of(HEROES);
-    return heroes;
+  getHeroes(): Observable<any> {
+    const dataObservable = this.http.get<Hero[]>(this.apiUrl);
+    return dataObservable;
   }
 }
